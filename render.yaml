@@ -2,8 +2,11 @@ services:
   - type: web
     name: telegram-bot
     runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python -m app.bot
+    rootDirectory: /  # Теперь ищем файлы в корне
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: python src/main.py
     envVars:
       - key: BOT_TOKEN
         value: 8252785543:AAFjc_rvmMhZqsqllX3uhP0XDHmwOTuqURA
