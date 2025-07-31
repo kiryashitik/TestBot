@@ -6,7 +6,7 @@ services:
     buildCommand: |
       pip install --upgrade pip
       pip install -r requirements.txt
-    startCommand: python src/main.py
+    startCommand: python main.py
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         value: 8252785543:AAFjc_rvmMhZqsqllX3uhP0XDHmwOTuqURA
