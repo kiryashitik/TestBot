@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.bot
+    envVars:
+      - key: BOT_TOKEN
+        value: 8252785543:AAFjc_rvmMhZqsqllX3uhP0XDHmwOTuqURA
